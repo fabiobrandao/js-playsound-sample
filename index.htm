@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>PlaySound</title>
+</head>
+<body>
+	<button type="button" onclick="playSound()">PlaySound</button>
+	<script>
+		function playSound()
+		{
+			var audio = new Audio();
+			
+			if (navigator.userAgent.match("Firefox/")) {
+				audio.src += 'assets/sound.ogg';
+			} else {
+				audio.src += 'assets/sound.mp3';
+			}    
+						
+			audio.play();
+		}
+	</script>
+</body>
+</html>
